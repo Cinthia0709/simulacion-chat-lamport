@@ -58,8 +58,3 @@ A continuación se muestra un ejemplo real de la consola al ejecutar el programa
  [Nodo 1] RECIBIDO de Nodo 2: 'Saludos desde Nodo 2'. (Reloj recibido: 2 -> Nuevo Reloj local: 6)
 
 Análisis de la TrazaDesorden de llegada: El Mensaje B enviado por el Nodo 0 llegó al Nodo 1 en el segundo 18:30:02, antes que el Mensaje A (que llegó en 18:30:03), cumpliendo el requisito de desorden de red.Corrección del Reloj de Lamport: Al recibir el Mensaje B con timestamp 3, el Nodo 1 (cuyo reloj estaba en 0) calculó $\max(0, 3) + 1 = 4$, garantizando la consistencia causal del tiempo lógico.6. ConclusionesLa simulación demuestra satisfactoriamente cómo el algoritmo de Lamport resuelve la falta de un reloj físico global en sistemas distribuidos. A pesar de los retardos en la red, la regla de actualización del reloj garantiza un orden lógico de eventos consistente entre todos los nodos participantes.
-
-1. Clonar este repositorio:
-   ```bash
-   git clone [https://github.com/TU_USUARIO/simulacion-chat-lamport.git](https://github.com/TU_USUARIO/simulacion-chat-lamport.git)
-   cd simulacion-chat-lamport
